@@ -1,0 +1,95 @@
+body {
+	font: 62.5% "Trebuchet MS", sans-serif;
+	margin: 0px;
+}
+
+ul#menu {
+	float:left;
+	width:400px;
+}
+
+ul#menu li.headlink {
+	display: block;
+	margin: 5px 0 0 0;
+	height: 27px;
+	border-left: 5px solid #000000;
+}
+
+ul#menu li.headlink ul {
+	display: none;
+	padding-left: 1px;
+}
+
+ul#menu li.element {
+	display: block;
+	float: left;
+	margin: 3px 0 0 0;
+	height: 27px;
+}
+
+ul#menu li.element a, ul#menu li.headlink a {
+	display: block;
+	float: left;
+	color: #000000;
+	background: #ffffff;
+	line-height: 27px;
+	text-decoration: none;
+	padding: 0 17px 0 18px;
+}
+
+ul#menu li a.grey {
+	border-bottom: 5px solid #646464;
+}
+ul#menu li a.red {
+	border-bottom: 5px solid #9c0000;
+}
+ul#menu li a.green {
+	border-bottom: 5px solid #116617;
+}
+ul#menu li a.yellow {
+	border-bottom: 5px solid #d7d100;
+}
+
+ul#menu li.element a:hover, ul#menu li.headlink a:hover {
+	background: #eeeeee;
+	color: black;
+}
+
+ul#right-menu {
+	margin-right: 40px;	
+	float:right;
+}
+ul#right-menu li {
+	display: block;
+	float: right;
+	margin: 0 4px 0 0;
+	height: 27px;
+}
+
+ul#right-menu li.left {
+	margin: 0;
+}
+
+div#framework-version{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+ul#right-menu li a {
+	display: block;
+	float: righ;
+	color: #000000;
+	background: #ffffff;
+	line-height: 27px;
+	text-decoration: none;
+	padding: 0 18px 0 17px;
+	height: 27px;
+}
+ul#right-menu li a{
+	border-bottom: 5px solid black;
+}
+ul#right-menu li a:hover {
+	background: #eeeeee;
+	color: black;
+}

@@ -1,0 +1,27 @@
+<?php 
+/**
+ * Partial that contains html for menu block
+ * 
+ * @category  scripts
+ * @package   NotesNotes
+ * @copyright Copyright (C) 2009 - Present, Alexander A. Steshenko
+ * @author    Alexander A. Steshenko <lcfsoft@gmail.com> {@link http://lcf.name} 
+ * @license   New BSD {@link http://www.opensource.org/licenses/bsd-license.php}
+ */
+?>
+<ul id="menu">
+    <li class="headlink">
+        <a href="#">New note</a>
+        <ul>
+            <li class="element"><a href="#" class="grey">Grey</a></li>
+            <li class="element"><a href="#" class="yellow">Yellow</a></li>
+            <li class="element"><a href="#" class="green">Green</a></li>
+            <li class="element"><a href="#" class="red">Red</a></li>
+        </ul>
+    </li>
+</ul>
+<ul id="right-menu">
+    <li><a href="http://lcf.name" target="_blank" style="border-top: 1px solid grey;border-right: 1px solid grey;border-bottom: 0px;">LCF.NAME</a></li>
+    <li><a href="<?php echo $this->url(array('action' => 'delete', 'controller' => 'page', 'page' => $this->page), 'default', true); ?>" onclick="return confirm('Delete the page and all its notes?');">Delete page</a></li>
+    <li><a href="<?php echo $this->url(array('action' => 'new', 'controller' => 'page'), 'default', true); ?>" target="_blank" onclick="return confirm('Create new page?');">New page</a></li>
+</ul>

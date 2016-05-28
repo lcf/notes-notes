@@ -1,0 +1,23 @@
+<?php 
+/**
+ * Additional layout used for static pages rendering
+ * 
+ * @category  layouts
+ * @package   NotesNotes
+ * @copyright Copyright (C) 2009 - Present, Alexander A. Steshenko
+ * @author    Alexander A. Steshenko <lcfsoft@gmail.com> {@link http://lcf.name} 
+ * @license   New BSD {@link http://www.opensource.org/licenses/bsd-license.php}
+ */
+?>
+<?php echo $this->doctype(); ?>
+<html>
+<head>
+    <?php echo $this->headTitle('Notes-Notes Organizer / ', 'PREPEND'); ?>
+    <?php echo $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8'); ?>
+    <?php echo $this->headLink(array('rel' => 'shortcut icon', 'href' => '/images/favicon.ico')); ?>
+    <?php echo $this->headLink()->appendStylesheet('/styles/notes.css'); ?>
+</head>
+<body>
+    <?php echo $this->layout()->content; ?>
+</body>
+</html>

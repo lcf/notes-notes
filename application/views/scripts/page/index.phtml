@@ -1,0 +1,31 @@
+<?php 
+/**
+ * Page index html page. Renders javascrpit code, sets pageCode variable
+ * also renders the menu
+ * 
+ * @category  scripts
+ * @package   NotesNotes
+ * @copyright Copyright (C) 2009 - Present, Alexander A. Steshenko
+ * @author    Alexander A. Steshenko <lcfsoft@gmail.com> {@link http://lcf.name} 
+ * @license   New BSD {@link http://www.opensource.org/licenses/bsd-license.php}
+ */
+?>
+<?php /* Append library files to headScript placeholder */ ?>
+<?php $this->headScript()
+        ->appendFile('/scripts/jquery-1.3.2.min.js')
+        ->appendFile('/scripts/jquery-ui-1.7.1.custom.min.js')
+        ->appendFile('/scripts/note.js') ?>
+        
+<?php /* Define page code and system routes for usage in ajax queries: */ ?>
+<?php $this->headScript()->captureStart(); ?>
+/* Current page code */
+var pageCode = "<?php echo $this->page ?>";
+/* System routes */
+var noteSaveUrl = "/note/save/" + "page/" + pageCode;
+var noteDeleteUrl = "/note/delete/" + "page/" + pageCode;
+var noteNewUrl = "/note/new/" + "page/" + pageCode;
+var noteListUrl = "/note/list/" + "page/" + pageCode;
+<?php $this->headScript()->captureEnd(); ?>
+
+<?php /* Show menu items: */ ?>
+<?php echo $this->partial('menu.phtml', array('page' => $this->page)); ?>
