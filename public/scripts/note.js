@@ -131,9 +131,9 @@ var getHtml = function(text) {
 	var html = text.replace(/</g, '&lt;');
 	html = html.replace(/>/g, '&gt;');
 	html = html.replace(/(^|[^\/])www\./g, "$1http://www.");
-	html = html.replace(/(^|[^'])(https?|ftp):\/\/([a-zA-Z0-9.-]+)\/([^ \n]{10})([^ \n]+)/g, 
+	html = html.replace(/(^|[^'])(https?|ftp):\/\/([a-zA-Z0-9.-]+)\/([^ \n]{10})([^ \n\)]+)/g, 
 		"$1<a target='_blank' href='$2://$3/$4$5'>$3/$4...</a>");
-	html = html.replace(/(^|[^'])(https?|ftp):\/\/([a-zA-Z0-9.-]+)([^ \n]*)/g, 
+	html = html.replace(/(^|[^'])(https?|ftp):\/\/([a-zA-Z0-9.-]+)([^ \n\)]*)/g, 
 		"$1<a target='_blank' href='$2://$3$4'>$3$4</a>");
 
 	var arr = 0;
