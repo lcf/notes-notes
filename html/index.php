@@ -16,17 +16,22 @@ defined('APPLICATION_PATH')
 defined('APPLICATION_ENV') 
     || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
 
+require_once APPLICATION_PATH . '/../vendor/autoload.php';
+
 /** Zend_Application */
 require_once 'Zend/Application.php';  
 
 
 // Create application, bootstrap, and run
+$configs = array(
+    APPLICATION_PATH . '/configs/application.ini',
+);
+if (file_exists(APPLICATION_PATH . '/configs/application.local.ini')) {
+    $configs[] = APPLICATION_PATH . '/configs/application.local.ini';
+}
 $application = new Zend_Application(
     APPLICATION_ENV,
-    array('config' => array(
-         APPLICATION_PATH . '/configs/application.ini',
-         APPLICATION_PATH . '/configs/application.local.ini',
-    ))
+    array('config' => $configs)
 );
 
 $application->bootstrap();
